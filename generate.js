@@ -1,4 +1,5 @@
-	function randomGenerate(){
+	function randomGenerate(l){
+		if (l==="generate"){
 		if(window.XMLHttpRequest)
 			{
 			var generate= new XMLHttpRequest();
@@ -21,5 +22,12 @@
 			};
 	generate.open("GET","https://dog.ceo/api/breeds/image/random",false);
 	generate.send();
+	}
+	document.getElementById("clear").style.display="table-cell";
+	document.getElementBydiv::before
+	}
+	else{ 
+		document.getElementById("gallary").innerHTML="";
+		document.getElementById("clear").style.display="none";
 	}
 	}

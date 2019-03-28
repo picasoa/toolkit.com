@@ -10,9 +10,10 @@
 <body class="wrapper">
 		<div class="wrapper" id="gallary"></div>
 		<table>
-				<th><h2>No. of PUPPIES you want</h2></th>
+				<td id="clear" onclick="randomGenerate('clear')"><button onclick="randomGenerate()" >Clear</button></td>
+				<td><h2>No. of PUPPIES you want</h2></td>
 				<td><input type="number"  min="4" max="1000" id="number" value=4 name="quantity"></td>
-				<td><button onclick="randomGenerate()">Generate New</button></td>
+				<td><button onclick="randomGenerate('generate')" id="generate">Generate New</button></td>
 		</table>
 </body>
 
