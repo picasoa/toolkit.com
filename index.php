@@ -15,7 +15,7 @@
 				<td><input type="number"  min="4" max="1000" id="number" value=4 name="quantity"></td>
 				<td><button onclick="randomGenerate('generate')" id="generate">Generate New</button></td>
 		</table>
-		<h1 style="columns: red;">THE GREATER THE NUBER THE GREATER THE LOAD TIME</h1>
+		<h1 style="color : red;">THE GREATER THE NUMBER THE GREATER THE LOAD TIME</h1>
 </body>
 
 <script type="text/javascript" src="generate.js">
