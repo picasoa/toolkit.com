@@ -24,7 +24,6 @@
 	generate.send();
 	}
 	document.getElementById("clear").style.display="table-cell";
-	document.getElementBydiv::before
 	}
 	else{ 
 		document.getElementById("gallary").innerHTML="";
