@@ -1,11 +1,15 @@
+	* {
+		border-radius: 6px;
+	}
 	.wrapper{
 			display: flex;
 			flex-flow: row wrap;
 			justify-content: center;
 			align-items: center;
-			padding: 0em 2em;
 			font-family: 'Oswald', sans-serif;
-			color: #676767;
+			margin: 0;
+			
+
 
 		}
 		div {
@@ -24,11 +28,12 @@
 			margin:1em;
 			width: 300px;
 			height: 200px;
+			z-index: 3;
 		}
 		button {
 			height: 2em;
 			width: 10em;
-			background:blue;
+			background:#E91E63;
 			border:none;
 			color:white;
 			border-radius: 5px;
@@ -47,6 +52,7 @@
 		td,th {
 			    padding: 10px 10px;
     			border: 1px solid black;
+
 		}
 		table {
 
@@ -54,8 +60,35 @@
 			display: table;
 			border-collapse: collapse;
 			margin-top: 10px;
+			box-shadow: 1px 1px 10px  rgba(0,0,0,0.5);
+			color: #676767;
+
 		}
 	
 		#clear {
 			display: none;
+		}
+
+		#gallary {
+			
+			position:relative;
+			background: url(https://farm6.staticflickr.com/5282/5324847138_d98c0661ea_b.jpg);
+			background-size: 100% 100%;
+			box-shadow:0.5px 0.5px 10px  rgba(0,0,0,1);
+			margin:1em;
+		}
+		#gallary::after {
+			content:' ';
+			position:absolute;
+			min-height:100%;
+			min-width:100%;
+			background: rgba(0,0,0,0.5);
+			z-index: 2;
+		}
+		header{
+			background: #E91E63;
+			width:100%;
+			margin:0;
+			border-radius: 0;
+			color:white;
 		}

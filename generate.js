@@ -9,20 +9,22 @@
 			var generate =new ActiveXObject("Microsoft.XMLHTTP");
 		}
 		var n=document.getElementById("number").value;
-		for(var i=0;i<n;i++){
 			generate.onreadystatechange=function(){
 				if(this.readyState== 4 && this.status==200)
 					{	
-						var param=JSON.parse(this.responseText);
-			 			var img=document.createElement("img");
-			 			img.setAttribute("src",param["message"])
-			 			document.getElementById("gallary").appendChild(img);
+						var address=(JSON.parse(this.responseText)).message;
+						console.log(address);
+						for(var j=0;j<address.length;j++){
+							
+							var img=document.createElement("img");
+							img.setAttribute("src",address[j]);
+							document.getElementById("gallary").appendChild(img);
+						}
 			 	}
 
 			};
-	generate.open("GET","https://dog.ceo/api/breeds/image/random",false);
+	generate.open("GET","https://dog.ceo/api/breeds/image/random/"+n,false);
 	generate.send();
-	}
 	document.getElementById("clear").style.display="table-cell";
 	}
 	else{ 
