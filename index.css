@@ -1,21 +1,15 @@
 	* {
 		border-radius: 6px;
+
 	}
 	.wrapper{
 			display: flex;
-			flex-flow: row wrap;
+			flex-flow:  wrap;
 			justify-content: center;
 			align-items: center;
 			font-family: 'Oswald', sans-serif;
 			margin: 0;
-			
-
-
-		}
-		div {
-			background: #d9d9d9;
-		}
-
+			}
 		#loading {
 				border:3px solid black;
 			margin:1em;
@@ -26,14 +20,14 @@
 		img{
 			border:3px solid black;
 			margin:1em;
-			width: 300px;
-			height: 200px;
+			width: 350px;
+			height: 250px;
 			z-index: 3;
 		}
 		button {
+			background: rgba(255,255,255,0.1);
 			height: 2em;
 			width: 10em;
-			background:#E91E63;
 			border:none;
 			color:white;
 			border-radius: 5px;
@@ -42,26 +36,26 @@
 			transition: 0.3s;
 		}
 		button:hover {
+			background: linear-gradient(277deg, #d81ed9, #d91e1e, #751ed9);
+			background-size: 600% 600%;
 			box-shadow: 0.5px 0.5px 10px  rgba(0,0,0,1);
 			transition: 0.3s;		
 		}
 		input{
-		height: 3em;
+		height: 2.5em;
 		width: 20em;
 		}
 		td,th {
 			    padding: 10px 10px;
-    			border: 1px solid black;
-
+			
 		}
 		table {
 
-			background: #f2f2f2; 
+			background:transparent; 
 			display: table;
 			border-collapse: collapse;
 			margin-top: 10px;
-			box-shadow: 1px 1px 10px  rgba(0,0,0,0.5);
-			color: #676767;
+			/*box-shadow: 1px 1px 10px  rgba(0,0,0,0.5);*/
 
 		}
 	
@@ -75,7 +69,7 @@
 			background: url(https://farm6.staticflickr.com/5282/5324847138_d98c0661ea_b.jpg);
 			background-size: 100% 100%;
 			box-shadow:0.5px 0.5px 10px  rgba(0,0,0,1);
-			margin:1em;
+			margin:0em 3em;
 		}
 		#gallary::after {
 			content:' ';
@@ -86,9 +80,43 @@
 			z-index: 2;
 		}
 		header{
-			background: #E91E63;
+			/*background: #E91E63;*/
 			width:100%;
 			margin:0;
 			border-radius: 0;
 			color:white;
+		}
+
+		.menu-bt{
+			margin:1em;
+			width:auto;
+			height: auto;
+			background: rgba(255,255,255,0.1);
+			padding: 1em;
+		}
+		.menu-bt:hover{
+			background: linear-gradient(277deg, #1ed9a9, #1e74d9, #d81ed9);
+			background-size: 180% 180%;
+			box-shadow: 0px 0px 20px  rgba(0,0,0,0.6);
+			transition-duration: 0.3;
+		}
+		.menu-wrapper{
+			/*background: linear-gradient(to left ,red , yellow 30%,orange 40%);*/
+			height: 100vh;
+			width:100%;
+			transition: 1s;
+		}
+		.menu-body{
+			background: linear-gradient(277deg, #1ed9a9, #1e74d9, #d81ed9);
+			background-size: 210% 210%;
+			height: 100vh;
+		}
+		.dog-body{
+			background: linear-gradient(277deg, #d81ed9, #d91e1e, #751ed9);
+			background-size: 600% 600%;
+		}
+		.menu {
+			position: relative;
+			top:-100px;
+			padding: 2em;
 		}
