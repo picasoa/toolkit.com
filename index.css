@@ -80,11 +80,11 @@
 			z-index: 2;
 		}
 		header{
-			/*background: #E91E63;*/
 			width:100%;
-			margin:0;
 			border-radius: 0;
 			color:white;
+			margin-top: -1px;
+			
 		}
 
 		.menu-bt{
@@ -94,7 +94,7 @@
 			background: rgba(255,255,255,0.1);
 			padding: 1em;
 		}
-		.menu-bt:hover{
+		button:hover{
 			background: linear-gradient(277deg, #1ed9a9, #1e74d9, #d81ed9);
 			background-size: 180% 180%;
 			box-shadow: 0px 0px 20px  rgba(0,0,0,0.6);
@@ -106,17 +106,56 @@
 			width:100%;
 			transition: 1s;
 		}
-		.menu-body{
-			background: linear-gradient(277deg, #1ed9a9, #1e74d9, #d81ed9);
-			background-size: 210% 210%;
-			height: 100vh;
-		}
-		.dog-body{
+		body{
 			background: linear-gradient(277deg, #d81ed9, #d91e1e, #751ed9);
 			background-size: 600% 600%;
+			height: 100vh;
 		}
 		.menu {
 			position: relative;
 			top:-100px;
 			padding: 2em;
+		}
+		#home{
+			margin:auto;
+			font-size: 2em;
+			position: relative;
+			right:430px;
+			top:5px;
+			color: rgba(255,255,255,0.5);
+
+		}
+		#home:hover{
+			 color:rgba(255,255,255,1);
+			 transition-duration: 0.5s;
+
+		}
+		.money {
+			min-height: 300px;
+			width: 300px;
+			background:rgba(255,255,255,0.1); 
+			margin: 2em;
+			box-shadow: 0px 0px 20px rgba(0,0,0,0.5); 
+		}
+		.calculator{
+			min-width:400px;
+			flex-flow: column wrap;
+		}
+		.cal-body{
+			position: relative;
+			bottom: 50px;
+			margin-top: 2em;
+		}
+		select{
+			background: rgba(255,255,255,0.1);
+			height: 2em;
+			border:none;
+			border-radius: 5px;
+			font-size: 1.5em;
+
+
+		}
+		.money p {
+			font-size: 4em;
+			text-align: center;
 		}

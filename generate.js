@@ -33,7 +33,11 @@ document.getElementById("clear").style.display="none";
 }
 
 function convertCurrency (){
-	var URL="https://free.currencyconverterapi.com/api/v6/convert?q=USD_PHP&compact=ultra&apiKey=beaebc2cbae14d4dd01f"
+	var howMuch = document.getElementById("howMuch").value;
+	var from =document.getElementsByTagName("select")[0].value;
+	var to = document.getElementsByTagName("select")[1].value;
+	var res= from +"_"+ to;
+	var URL="https://free.currencyconverterapi.com/api/v6/convert?q="+from+"_"+to+"&compact=ultra&apiKey=beaebc2cbae14d4dd01f";
 	var generate2= new XMLHttpRequest();
 		generate2.open("GET",URL,true);
 		generate2.send();
@@ -42,23 +46,17 @@ function convertCurrency (){
 				if(this.readyState== 4 && this.status==200)
 				{
 					var restext=JSON.parse(this.responseText);
-					console.log(restext);
-				}
-				else if(this.readyState==0)
-				{
-					console.log("initialized");
-				}
-				else if(this.readyState==1)
-				{
-					console.log("connection established");
-				}
-				else if(this.readyState==2)
-				{
-					console.log("request recived");
-				}
-				else if(this.readyState==3)
-				{
-					console.log("processing");
+					if(restext[res]){
+					document.getElementsByClassName("money")[0].firstChild.innerHTML=howMuch;
+					document.getElementsByClassName("money")[1].firstChild.innerHTML=howMuch*restext[res];
+	
+					}
+					else{
+						document.getElementsByClassName("money")[0].firstChild.innerHTML="Can not Convert";
+					document.getElementsByClassName("money")[1].firstChild.innerHTML="Can not Convert";
+
+					}
+					
 				}
 
 		}
