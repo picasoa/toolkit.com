@@ -24,11 +24,9 @@ document.getElementById("gallary").appendChild(img);
 };
 generate.open("GET","https://dog.ceo/api/breeds/image/random/"+n,true);
 generate.send();
-document.getElementById("clear").style.display="table-cell";
 }
 else{ 
 document.getElementById("gallary").innerHTML="";
-document.getElementById("clear").style.display="none";
 }
 }
 
