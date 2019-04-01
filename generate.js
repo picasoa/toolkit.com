@@ -59,3 +59,90 @@ function convertCurrency (){
 
 		}
 }
+
+function cricket(api){
+	var key= "yNnqOMo1AZcXK8oTTsYEoTphU1y1";
+	var url="https://cricapi.com/api/";
+	var request= new XMLHttpRequest();
+	if(api==="matches"){
+		request.open("POST",url+api,true);
+		request.setRequestHeader("Content-type","application /x-www-form-urlencoded");
+		request.send(apikey=key);
+		request.onreadystatechange= function(){
+		if(this.readyState== 4 && this.status==200)
+				{
+					var restext=JSON.parse(this.responseText);
+					console.log(restext);
+				}
+
+		}
+	}
+	else if(api==="cricketScore")
+	{
+		request.open("POST",url+api,true);
+		request.setRequestHeader("content-type","application /x-www-form-urlencoded");
+		request.send("apikey=key");
+		var matches =consoleDot();
+		console.log(matches);
+
+	}			
+	}
+
+function world()
+	{
+		var request= new XMLHttpRequest();
+		request.open("GET","https://restcountries.eu/rest/v2/name/"+document.getElementById("countryName").value+"?fullText=true",true);
+		request.send();
+		request.onreadystatechange= function(){
+		if(this.readyState== 4 && this.status==200)
+				{	var list =[""];
+					var restext=JSON.parse(this.responseText);
+					var table = document.createElement("table");
+					table.setAttribute("id","infoTable");
+					for (var index in restext)
+					{		for (var x in restext[index]){
+							var td=document.createElement("td");
+							var th= document.createElement("th");
+							td.setAttribute("id","tdd");
+							th.setAttribute("id","thh");
+							if(typeof(restext[index][x])==="object")
+							{
+								for(var v in restext[index][x])
+								{
+									if(typeof(restext[index][x][v])==="object")
+									{
+										for(var m in restext[index][x][v])
+										{
+											if(typeof(restext[index][x][v][m])==="object")
+											{
+												for(var b in restext[index][x][v][m])
+													{
+													td.innerHTML += " " +(restext[index][x][v][m][b]);
+													}
+												}
+											td.innerHTML += " " +(restext[index][x][v][m]);
+										}			
+									}
+								td.innerHTML += " " +(restext[index][x][v]);
+								}
+							}
+							else{
+								td.innerHTML=(restext[index][x]);
+								console.log(typeof(restext[index][x]));
+							}
+							th.innerHTML=(JSON.stringify(x));
+							var tr=document.createElement("tr");
+							tr.appendChild(th);
+							tr.appendChild(td);
+							table.appendChild(tr);
+							}
+					document.getElementById("wola").innerHTML="";		
+					}
+					document.getElementById("wola").appendChild(table);
+
+
+				}
+
+		}
+	}
+
