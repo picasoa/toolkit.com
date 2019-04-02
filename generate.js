@@ -59,35 +59,6 @@ function convertCurrency (){
 
 		}
 }
-
-function cricket(api){
-	var key= "yNnqOMo1AZcXK8oTTsYEoTphU1y1";
-	var url="https://cricapi.com/api/";
-	var request= new XMLHttpRequest();
-	if(api==="matches"){
-		request.open("POST",url+api,true);
-		request.setRequestHeader("Content-type","application /x-www-form-urlencoded");
-		request.send(apikey=key);
-		request.onreadystatechange= function(){
-		if(this.readyState== 4 && this.status==200)
-				{
-					var restext=JSON.parse(this.responseText);
-					console.log(restext);
-				}
-
-		}
-	}
-	else if(api==="cricketScore")
-	{
-		request.open("POST",url+api,true);
-		request.setRequestHeader("content-type","application /x-www-form-urlencoded");
-		request.send("apikey=key");
-		var matches =consoleDot();
-		console.log(matches);
-
-	}			
-	}
-
 function world()
 	{
 		var request= new XMLHttpRequest();
@@ -146,3 +117,39 @@ function world()
 		}
 	}
 
+function  scorePls(api){
+var key= "yNnqOMo1AZcXK8oTTsYEoTphU1y1";
+	var url="https://cricapi.com/api/";
+	var request= new XMLHttpRequest();
+	if (api ==="calender"){
+	request.open("GET","http://cricapi.com/api/matchCalendar?apikey="+key,true);
+	request.send();
+	request.onreadystatechange= function(){
+		if(this.readyState== 4 && this.status==200)
+				{
+					var restext=JSON.parse(this.responseText);
+					var div = document.getElementById("cricket");
+					div.innerHTML="";
+					for (var x in restext["data"]){
+					div.innerHTML +="<p id='cal-data'>"+(restext["data"][x]["date"])+"</p>";
+					div.innerHTML +="<p id='cal-data'>"+(restext["data"][x]["name"])+"</p>";}
+				}}}
+	else{
+		request.open("GET","http://cricapi.com/api/cricket?apikey="+key,true);
+		request.send();
+	request.onreadystatechange= function(){
+		if(this.readyState== 4 && this.status==200)
+				{
+					var restext=JSON.parse(this.responseText);
+					var div = document.getElementById("cricket");
+					div.innerHTML="<p><i class='fas fa-asterisk'></i>:Team batting</p>";
+					for(var x in restext["data"]){
+						div.innerHTML +="<p id='cal-data'>"+(restext["data"][x]["description"])+"</p>";
+					};
+				}}
+	}
+	
+		
+
+			
+}

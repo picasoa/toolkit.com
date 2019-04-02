@@ -13,9 +13,8 @@
 <div class="wrapper menu">
 <a href="dog.html"><button class=" menu-bt"><span>If You Love Dogs! </span><i class="fas fa-dog"></i></button></a>
 <a href="currency.html"><button class=" menu-bt"><i class="fas fa-dollar-sign"></i> Convert My Currency <i class="fas fa-rupee-sign"></i></button></a>
-<a href=""><button class=" menu-bt"><span>Am I Hacked ? </span><i class="fas fa-desktop"></i></button></a>
-<a href=""><button class=" menu-bt">Whats The Score Bro ? <i class="fas fa-chart-bar"></i></button></a>
-<a href=""><button class=" menu-bt">Wiki Country <i class="fas fa-globe"></i></button></a>
+<a href="whatsthescore.html"><button class=" menu-bt">Whats The Score Bro ? <i class="fas fa-chart-bar"></i></button></a>
+<a href="wikiworld.html"><button class=" menu-bt">Wiki Country <i class="fas fa-globe"></i></button></a>
 </div>
 </body>
 </html>

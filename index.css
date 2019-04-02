@@ -98,8 +98,8 @@
 			padding: 1em;
 		}
 		button:hover{
-			background: linear-gradient(277deg, #1ed9a9, #1e74d9, #d81ed9);
-			background-size: 180% 180%;
+			background: linear-gradient(277deg, #751ed9, #d91e1e,#d81ed9);
+			background-size: 110% 110%;
 			box-shadow: 0px 0px 20px  rgba(0,0,0,0.6);
 			transition-duration: 0.3;
 		}
@@ -111,7 +111,7 @@
 		}
 		body{
 			background: linear-gradient(277deg, #d81ed9, #d91e1e, #751ed9);
-			background-size: 600% 600%;
+			background-size: 200% 200%;
 			height: 100vh;
 		}
 		.menu {
@@ -180,4 +180,14 @@
 		}
 		#wola{
 			width: 55%;
+			background: rgba(0,0,0,0.5);
+		}
+		#cal-data {
+			width:100%;
+			border: white;
+			margin: 0.5em;
+		}
+		#cricket {
+			background: rgba(255,255,255,0.5);
+			width: 60%;
 		}
